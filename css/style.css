@@ -1,0 +1,306 @@
+/* VARIABLES */
+:root {
+    --white:        rgb(255, 255, 255);
+    --lightGrey:    rgb(215, 215, 215);
+    --mLightGrey:   rgb(200, 200, 200);
+    --grey:         rgb(184, 184, 184);
+    --transGrey:    rgba(176, 176, 176, 0.4);
+    --mDarkGrey:    rgb(134, 134, 134);
+    --darkGrey:     rgb(65, 65, 65);
+    --black:        rgb(0, 0, 0);
+
+    --red:          rgb(208, 66, 66);
+    --darkRed:      rgb(124, 38, 38);
+
+    --green:        rgb(110, 196, 99);
+    --darkGreen:    rgb(75, 134, 67);
+
+    --blue:         rgb(95, 128, 210);
+    --darkBlue:     rgb(70, 94, 156);
+    --purple:       rgb(110, 70, 156);
+}
+
+/* FONTS */
+/* chivo mono normal */
+@font-face {
+    font-family:    chivo_mono;
+    src:            url('/fonts/Chivo_Mono/ChivoMono-VariableFont_wght.ttf');
+    font-weight:    normal;
+    font-style:     normal;
+    font-feature-settings: "liga" 0;
+    font-variant-ligatures: none;
+}
+
+/* chivo mono italic */
+@font-face {
+    font-family:    chivo_mono;
+    src:            url('/fonts/Chivo_Mono/ChivoMono-Italic-VariableFont_wght.ttf');
+    font-weight:    normal;
+    font-style:     italic;
+    font-feature-settings: "liga" 0;
+    font-variant-ligatures: none;
+}
+
+
+/* ELEMENTS */
+body {
+    background:     var(--lightGrey);
+    font-size:      16pt;
+}
+
+.textBox {
+    border:         3px solid var(--darkGrey);
+    border-radius:  5px;
+
+    margin:         1rem;
+
+    padding:        1rem;
+    padding-top:    0rem;
+}
+
+.textHeader {
+    font-family:    chivo_mono, monospace;
+    font-size:      1.5em;
+    color:          var(--darkGrey);
+
+    border-bottom:  3px solid var(--darkGrey);
+
+    background:     var(--grey);
+
+    margin-left:    -1rem;
+    margin-right:   -1rem;
+    margin-top:     0rem;
+    margin-bottom:  1rem;
+
+    padding:        1rem;
+}
+
+.textBody {
+    border:         none;
+
+    margin:         0rem;
+
+    padding:        0rem;
+
+    font-size:      1em;
+    font-family:    chivo_mono, monospace;
+    color:          var(--darkGrey);
+}
+
+.textInset {
+    border:         none;
+    border-left:    2px solid var(--darkGrey);
+
+    margin:         0rem;
+    margin-left:    0.5rem;
+    margin-top:     1rem;
+    margin-bottom:  1rem;
+
+    padding:        0rem;
+    padding-left:   0.5rem;
+
+    font-size:      1em;
+    font-family:    chivo_mono, monospace;
+    color:          var(--darkGrey);
+}
+
+.textLink {
+    color:          var(--blue);
+    text-decoration:
+                    underline dashed 0.1em;
+    transition: all 0.2s linear;
+}
+
+.textLink:visited {
+    color:          var(--purple);
+    text-decoration:
+                    underline dashed 0.1em;
+}
+
+.textLink:hover {
+    color:          var(--darkBlue);
+}
+
+.textItalic {
+    color:          var(--darkGrey);
+    font-style:     italic;
+}
+
+.textBold {
+    color:          var(----darkGrey);
+    font-weight:    bold;
+}
+
+.buttonContainer {
+    margin:         1rem;
+    padding:        0.5rem;
+
+    display:        flex;
+    flex-direction: row;
+    gap:            0.2rem;
+    flex-wrap:      wrap;
+    width:          fit-content;
+
+    border:         2px dashed black;
+    border-radius:  5px;
+}
+
+.button {
+    font-family:    chivo_mono, monospace;
+    color:          var(--darkGrey);
+    font-size:      1em;
+    text-decoration:
+                    none;
+
+    border:         2px solid black;
+    border-radius:  5px;
+
+    margin:         0rem;
+    padding:        0.5rem;
+
+    background:     var(--grey);
+
+    transition:     all 0.1s linear;
+}
+
+.button:hover {
+    background:     var(--mDarkGrey);
+
+    cursor:         grab;
+}
+
+.button:active {
+    scale:          0.9;
+
+    cursor:         grabbing;
+}
+
+.buttonLink {
+    color:          var(--blue);
+    text-decoration:
+                    underline dashed 0.1em;
+    transition:     all 0.1s linear;
+}
+
+.buttonLink:visited {
+    color:          var(--purple);
+    text-decoration:
+                    underline dashed 0.1em;
+}
+
+.buttonLink:hover {
+    color:          var(--darkBlue);
+    background:     var(--lightGrey);
+}
+
+.buttonGreen {
+    background:     var(--green);
+}
+
+.buttonGreen:hover {
+    background:     var(--darkGreen);
+}
+
+.buttonRed {
+    background:     var(--red);
+}
+
+.buttonRed:hover {
+    background:     var(--darkRed);
+}
+
+
+.buttonBlue {
+    background:     var(--blue);
+}
+
+.buttonBlue:hover {
+    background:     var(--darkBlue);
+}
+
+.form {
+    padding:        0.5rem;
+
+    display:        flex;
+    gap:            0.5rem;
+
+    flex-wrap:      wrap;
+}
+
+.formObject {
+    padding:        0.5rem;
+    width:          fit-content;
+    height:         fill;
+
+    border:         2px solid black;
+    border-radius:  5px;
+}
+
+.inputText {
+    padding:        0.2rem;
+
+    border:         2px solid black;
+    border-radius:  5px;
+
+    outline:        none;
+    height:         fit-content;
+
+    font-size:      1em;
+    font-family:    chivo_mono, monospace;
+
+    width:          fit-content;
+}
+
+.staticTextBox {
+    padding:        0.2rem;
+
+    border:         2px solid black;
+    border-radius:  5px;
+
+    outline:        none;
+    height:         fit-content;
+
+    font-size:      1em;
+    font-family:    chivoMono, monospace;
+
+    background-color:
+                    var(--transGrey);
+}
+
+
+/* MISC */
+.noTextHighlight {
+    user-select:    none;
+}
+
+.lesserText {
+    color:          var(--mLightGrey);
+}
+
+.cp1Nick {
+    padding:        0 4px;
+    padding-top:    0px;
+    padding-bottom: 0px;
+    font-size:      .92em;
+    border-radius:  2px;
+    background-color: 
+                    rgb(192, 211, 242);
+
+    outline:        var(--black) 2px solid; /* increase contrast */
+
+    transition:     all 0.2s;
+}
+
+.cp1Nick:hover {
+    filter:         blur(2px);
+
+    cursor:         help;
+}
+
+#johnContainer {
+    display:grid;
+    gap: 1px;
+
+    grid-row: span 3;
+    
+}

@@ -1,0 +1,13 @@
+#smallBox {
+    flex-grow: 2;
+}
+
+#thickBox {
+    
+    flex-grow: 1;
+}
+
+#tempBoxHolder {
+    display: flex;
+    flex-wrap: wrap;
+}
