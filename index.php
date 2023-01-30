@@ -32,9 +32,8 @@
                   <input type="text" class="inputText" placeholder="bot name...">
                   <input type="text" class="inputText" placeholder="bot creator...">
                   <input type="text" class="inputText" placeholder="bot lifespan...">
-               </div>
-               <div class="formObject">
-                  results:
+                  <br>
+                  results: <a class="textLink"
                </div>
             </form>
          </div>
