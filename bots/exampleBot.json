@@ -1,0 +1,49 @@
+{
+    "name": "exampleBot",
+
+    "aliases": [
+        "exampleBot",
+        "exampleBotV2"
+    ],
+    "creators": [
+        "exampleBotDev",
+        "exampleBotDevsAccomplice"
+    ],
+    "sources": [
+        "github.com/exampleBotDev/exampleBot",
+        "pastebin.com/some-url"
+    ],
+    "created": 2020,
+    "eol": null,
+    "status": "sparsely maintained",
+
+    "activeRooms": [
+        "xkcd",
+        "test",
+        "bots"
+    ],
+
+    "standardCommands": {
+        "!ping": "Pong!",
+        "!ping@": "Pong!",
+        "!help": "a bot by @exampleBotDev",
+        "!help@": "these are some things I can do:\n    !summon @exampleBot summons me\n    !example examples me",
+        "!kill@": null
+    },
+    "otherCommands": {
+        "!summon @exampleBot": "/me is summoned",
+        "!example": "/me examples"
+    },
+
+
+    "description": "exampleBot was a bot developed by @exampleBotDev and @exampleBotDevsAccomplice in late 2020. Its purpose was to create a template for future bot wiki entries.",
+
+    "timeline": [
+        "Dec 2019: bot development begins",
+        "Jan 2020: bot launched in &test",
+        "Mar 2020: bot launched in &xkcd, &bots",
+        "May 2021: bot goes down for 2 days due to \"server issues\"",
+        "late May 2021: bot servers changed",
+        "Feb 2022: @exampleBotDevsAccomplice takes over development"
+    ]
+}
