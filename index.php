@@ -33,6 +33,9 @@
                   <input type="text" class="inputText" placeholder="bot creator...">
                   <input type="text" class="inputText" placeholder="bot lifespan...">
                </div>
+               <div class="formObject">
+                  results:
+               </div>
             </form>
          </div>
       </div>
