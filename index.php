@@ -33,7 +33,7 @@
                   <input type="text" class="inputText" placeholder="bot creator...">
                   <input type="text" class="inputText" placeholder="bot lifespan...">
                   <br>
-                  results: <a class="textLink"
+                  results: <a class="textLink"></a>
                </div>
             </form>
          </div>
