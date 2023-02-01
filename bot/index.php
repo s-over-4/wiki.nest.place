@@ -1,7 +1,7 @@
 <?php
 
 $bot = $_GET["bot"];
-$path = "bots/{$bot}.json";
+$path = "../bots/{$bot}.json";
 $jsonRaw = file_get_contents($path);
 $jsonData = json_decode($jsonRaw, true);
 
@@ -12,6 +12,15 @@ $jsonData = json_decode($jsonRaw, true);
 //echo "<br><br>raw file contents: " . $jsonRaw;
 // echo "<br><br>php array: ";
 // print_r($jsonData);
+
+function commands ($c) {
+   foreach ($c as $key=>$value) {
+      if ($value !== null) {
+         echo $key . ":  " . $value . "<br>";
+      }
+   }
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -49,11 +58,27 @@ active rooms:<?php  echo "\t" . join(",\n\t\t", $jsonData["activeRooms"]) . "\n\
             about
          </div>
          <div class="textBody">
+
 <?php echo $jsonData["description"]; ?>
             <br><br>
             <b>timeline:</b>
             <br>
-<?php echo join("<br>", $jsonData["timeline"]) . "\n"; ?>   
+<?php echo join("<br>", $jsonData["timeline"]); ?>
+            
+            <br><br>
+            <b>specific commands:</b>
+            <br>
+            <pre class="textInset">
+<?php echo commands($jsonData["otherCommands"]); ?>
+            </pre>
+
+            <br><br>
+            <b>standard commands:</b>
+            <br>
+            <pre class="textInset">
+<?php echo commands($jsonData["standardCommands"]); ?>
+            </pre>
+            
          </div>
       </div>
    </div>
