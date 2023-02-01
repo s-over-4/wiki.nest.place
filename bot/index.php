@@ -47,6 +47,7 @@ status:<?php        echo "\t\t" . $jsonData["status"] . "\n\n"; ?>
 aliases:<?php       echo "\t" . join(",\n\t\t", $jsonData["aliases"]) . "\n\n"; ?>
 creators:<?php      echo "\t" . join(",\n\t\t", $jsonData["creators"]) . "\n\n"; ?>
 year created:<?php  echo "\t" . $jsonData["created"] . "\n\n"; ?>
+<?php if ($jsonData["eol"] !== null) {echo "\t" . $jsonData["eol"] . "\n\n"; } ?>
 sources:<?php       echo "\t" . join(",\n\t\t", $jsonData["sources"]) . "\n\n"; ?>
 active rooms:<?php  echo "\t" . join(",\n\t\t", $jsonData["activeRooms"]) . "\n\n"; ?>
             </pre>
@@ -60,6 +61,7 @@ active rooms:<?php  echo "\t" . join(",\n\t\t", $jsonData["activeRooms"]) . "\n\
          <div class="textBody">
 
 <?php echo $jsonData["description"]; ?>
+
             <br><br>
             <b>timeline:</b>
             <br>
