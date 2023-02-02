@@ -1,0 +1,54 @@
+{
+    "name": "f/4",
+
+    "aliases": [
+        "f/4",
+        "<letter>/<number>"
+    ],
+    "creators": [
+        "c+1"
+    ],
+    "sources": [
+        "lost"
+    ],
+    "created": 2021,
+    "eol": 2022,
+    "status": "dead",
+
+    "activeRooms": [
+        "xkcd",
+        "test",
+        "bots",
+        "io",
+        "testing"
+    ],
+
+    "standardCommands": {
+        "!ping": "Fuck you, I was trying to sleep",
+        "!ping@": "Fuck you, I was trying to sleep",
+        "!help": "a bot by @c+1 that provides a multitude of functions. use !help @f/4 to view some of them.",
+        "!help@": "This bot was made by @c+1. It provides some basic functions:\n\t!help: displays this help message (duh..)\n\t!calc [value 1] [operator(/,+,*,-,√)] [value 2]: simplistic calculator\n\ttest: test@\n\t!Hi I'm [name]: greeting(mostly for testing)\n\t!What is the time?: displayes current UTC time\n\t!aggie.io: displays link to the unofficial &xkcd canvas\n\t!wordle [message]: Bot generates a random 5-letter word every day. Guess the word using !wordle followed by a 5-letter string. Use '!wordle help' to show the wordle-specific help message.\n\t!dclock: Displays the time untill midnight on the Doomsday Clock, as provided by the Bulletin of the Atomic Scientists\n\t!counter [argument] [value]: Provides various counter-related functions. Use '!counter help get' to show the counter-specific help message.\n\t!TTW: Displays time until March 24th, 2022, as requested by @wes.\n\t!reddit [subreddit] [number of posts] [timeframe (hour, day, week, month, year, all time)] [sorting method (controversial, best, hot, new, rising, top)]: Returns the specified reddit posts. Use '!redditJTR' to show just the results (i am very good at acronyms).\n\t!quote \"<quote>\" <person>: Records a quote. Use \"!quote \"get\" <person> | <all>\" to show all quotes from a specific user or all quotes recorded (note that this list is limited by euphoria's character limit (and so will this help message soon)).",
+        "!kill@": "/me departs"
+    },
+    "otherCommands": {
+        "!calc\\s+(\\d+)([-+*/^√])(\\d+)": "calculator",
+        "!what is the time?": "displayed current time and date",
+        "smh": "had a 1 in 10000 chance of replying with 100 words of \"smh ing-my head me head smhing\"",
+        "!smh": "forced above reply",
+        "/me arrives": "o/",
+        "!aggie.io": "https://aggie.io/9llc2ssf43",
+        "": ""
+    },
+
+
+    "description": "exampleBot was a bot developed by @exampleBotDev and @exampleBotDevsAccomplice in late 2020. Its purpose was to create a template for future bot wiki entries.",
+
+    "timeline": [
+        "Dec 2019: bot development begins",
+        "Jan 2020: bot launched in &test",
+        "Mar 2020: bot launched in &xkcd, &bots",
+        "May 2021: bot goes down for 2 days due to \"server issues\"",
+        "late May 2021: bot servers changed",
+        "Feb 2022: @exampleBotDevsAccomplice takes over development"
+    ]
+}

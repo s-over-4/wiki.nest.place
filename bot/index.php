@@ -16,10 +16,32 @@ $jsonData = json_decode($jsonRaw, true);
 function commands ($c) {
    foreach ($c as $key=>$value) {
       if ($value !== null) {
-         echo $key . ":  " . $value . "<br>";
+         echo $key . ":  " . $value . "\n";
       }
    }
 }
+
+function sources ($s) {
+   foreach ($s as $n) {
+      echo "\t<a href=\"https://$n\" target=\"_blank\">&{$n}</a>\n\t";
+   }
+   echo "\n";
+}
+
+function rooms ($r) {
+   foreach ($r as $n) {
+      echo "\t<a href=\"https://euphoria.io/room/{$n}/\" target=\"_blank\">&{$n}</a>\n\t";
+   }
+   echo "\n";
+}
+
+// function statusColor ($s) {
+//    if ($s == "EOL") {
+//       echo ""
+//    }
+// }
+
+
 
 ?>
 
@@ -48,8 +70,8 @@ aliases:<?php       echo "\t" . join(",\n\t\t", $jsonData["aliases"]) . "\n\n"; 
 creators:<?php      echo "\t" . join(",\n\t\t", $jsonData["creators"]) . "\n\n"; ?>
 year created:<?php  echo "\t" . $jsonData["created"] . "\n\n"; ?>
 <?php if ($jsonData["eol"] !== null) {echo "\t" . $jsonData["eol"] . "\n\n"; } ?>
-sources:<?php       echo "\t" . join(",\n\t\t", $jsonData["sources"]) . "\n\n"; ?>
-active rooms:<?php  echo "\t" . join(",\n\t\t", $jsonData["activeRooms"]) . "\n\n"; ?>
+sources:<?php       sources ($jsonData["sources"]); ?>
+active rooms:<?php  rooms ($jsonData["activeRooms"]); ?>
             </pre>
          </div>
       </div>
@@ -60,6 +82,8 @@ active rooms:<?php  echo "\t" . join(",\n\t\t", $jsonData["activeRooms"]) . "\n\
          </div>
          <div class="textBody">
 
+            <b>overview:</b>
+            <br>        
 <?php echo $jsonData["description"]; ?>
 
             <br><br>
